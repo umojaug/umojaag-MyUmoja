@@ -1,0 +1,21 @@
+import React, { useState } from "react";
+import TopHeader from "../../../components/TopHeader";
+import CompleteListSix from "./CompleteListSix";
+import SearchEvaluationThreeSix from "../../../components/SearchEvaluationThreeSix";
+
+const CompleteSix = () => {
+  const [dataForm, setDataForm] = useState("");
+  return (
+    <div className="card w-full max-w-screen-xl">
+      <TopHeader
+        title="Evaluation Complete List For Six Months"
+        btn="Return"
+        path="/evaluation"
+      />
+      <SearchEvaluationThreeSix action={setDataForm} />
+      {dataForm && <CompleteListSix dataForm={dataForm} />}
+    </div>
+  );
+};
+
+export default CompleteSix;

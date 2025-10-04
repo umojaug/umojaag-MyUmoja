@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrapesTl.Utility", "GrapesTl.Utility\GrapesTl.Utility.csproj", "{D97A71EB-5266-4068-8EB1-4CB8571DCFCF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrapesTl", "GrapesTl\GrapesTl.csproj", "{F1A65DCA-585F-4065-9310-0CCF8211B7C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrapesTl.DataAccess", "GrapesTl.DataAccess\GrapesTl.DataAccess.csproj", "{8BE58D2A-81F1-4ECD-8A02-4DCE920DF548}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrapesTl.Models", "GrapesTl.Models\GrapesTl.Models.csproj", "{5D420F0A-744F-4895-BCF8-8F2F70C6A6EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrapesTl.DTO", "GrapesTl.DTO\GrapesTl.DTO.csproj", "{F4EC5B6D-AE45-3A5C-EA4B-9A3228707B17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrapesTl.Shared", "GrapesTl.Shared\GrapesTl.Shared.csproj", "{724320B6-88D4-8637-B0C5-9974FFC3D846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D97A71EB-5266-4068-8EB1-4CB8571DCFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D97A71EB-5266-4068-8EB1-4CB8571DCFCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D97A71EB-5266-4068-8EB1-4CB8571DCFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D97A71EB-5266-4068-8EB1-4CB8571DCFCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1A65DCA-585F-4065-9310-0CCF8211B7C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A65DCA-585F-4065-9310-0CCF8211B7C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A65DCA-585F-4065-9310-0CCF8211B7C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A65DCA-585F-4065-9310-0CCF8211B7C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BE58D2A-81F1-4ECD-8A02-4DCE920DF548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE58D2A-81F1-4ECD-8A02-4DCE920DF548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE58D2A-81F1-4ECD-8A02-4DCE920DF548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE58D2A-81F1-4ECD-8A02-4DCE920DF548}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D420F0A-744F-4895-BCF8-8F2F70C6A6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D420F0A-744F-4895-BCF8-8F2F70C6A6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D420F0A-744F-4895-BCF8-8F2F70C6A6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D420F0A-744F-4895-BCF8-8F2F70C6A6EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4EC5B6D-AE45-3A5C-EA4B-9A3228707B17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4EC5B6D-AE45-3A5C-EA4B-9A3228707B17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4EC5B6D-AE45-3A5C-EA4B-9A3228707B17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4EC5B6D-AE45-3A5C-EA4B-9A3228707B17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{724320B6-88D4-8637-B0C5-9974FFC3D846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{724320B6-88D4-8637-B0C5-9974FFC3D846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{724320B6-88D4-8637-B0C5-9974FFC3D846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{724320B6-88D4-8637-B0C5-9974FFC3D846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5497BCDD-6E5A-4CA6-B078-993B58819F78}
+	EndGlobalSection
+EndGlobal

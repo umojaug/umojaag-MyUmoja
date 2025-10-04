@@ -1,0 +1,61 @@
+﻿namespace GrapesTl.Utility;
+
+public static class OperationConstant
+{
+    public const string AuditInherentRiskCreate = "Audit Inherent Risk";
+    public const string AuditInherentRiskUpdate = "Audit Inherent Risk";
+    public const string AuditInherentRiskDelete = "Audit Inherent Risk";
+    public const string AuditResidualRiskCreate = "Audit Residual Risk";
+    public const string AuditResidualRiskUpdate = "Audit Residual Risk";
+    public const string AuditResidualRiskDelete = "Audit Residual Risk";
+    public const string AuditWeightageCreate = "Audit Weightage";
+    public const string AuditWeightageUpdate = "Audit Weightage";
+    public const string AuditWeightageDelete = "Audit Weightage";
+    public const string AuditAreasCreate = "Audit Areas";
+    public const string AuditAreasUpdate = "Audit Areas";
+    public const string AuditAreasDelete = "Audit Areas";
+    public const string AuditChecklistUpdate = "Audit Check list";
+    public const string AuditChecklistUpdate1 = "Audit Check list";
+    public const string AuditChecklistUpdate2 = "Audit Check list";
+    public const string AuditChecklistUpdate3 = "Audit Check list";
+    public const string AuditChecklistUpdate4 = "Audit Check list";
+    public const string AuditChecklistUpdate5 = "Audit Check list";
+    public const string AuditChecklistUpdate6 = "Audit Check list";
+    public const string AuditChecklistUpdate7 = "Audit Check list";
+    public const string AuditChecklistUpdate8 = "Audit Check list";
+    public const string AuditChecklistUpdate9 = "Audit Check list";
+    public const string AuditChecklistUpdate10 = "Audit Check list";
+    public const string AuditChecklistUpdate11 = "Audit Check list";
+    public const string AuditChecklistUpdate12 = "Audit Check list";
+    public const string AuditChecklistUpdate13 = "Audit Check list";
+    public const string AuditChecklistUpdate14 = "Audit Check list";
+    public const string AuditChecklistUpdate15 = "Audit Check list";
+    public const string AuditChecklistUpdate16 = "Audit Check list";
+    public const string AuditChecklistUpdate17 = "Audit Check list";
+    public const string AuditObsCreate = "Audit Obs";
+    public const string AuditObsUpdate = "Audit Obs";
+    public const string AuditObsDelete = "Audit Obs";
+    public const string AuditCreationCreate = "Audit Creation";
+    public const string AuditCreationUpdate = "Audit Creation";
+    public const string AuditCreationDelete = "Audit Creation";
+    public const string AudiTestStepsCreate = "AudiTest Steps";
+    public const string AudiTestStepsUpdate = "AudiTest Steps";
+    public const string AudiTestStepsDelete = "AudiTest Steps";
+    public const string AuditEvidencesCreate = "Audit Evidences";
+    public const string AuditEvidencesDelete = "Audit Evidences";
+    public const string AuditMeetingMinutesCreate = "Audit Meeting Minutes";
+    public const string AuditMeetingMinutesUpdate = "Audit Meeting Minutes";
+    public const string AuditMeetingMinutesDelete = "Audit Meeting Minutes";
+    public const string AuditObservationsCreate = "Audit Observations";
+    public const string AuditObservationsUpdate = "Audit Observations";
+    public const string AuditObservationsDelete = "Audit Observations";
+    public const string AuditPlanUpdate = "Audit Plan";
+    public const string AuditPlaStatusUpdate = "Audit Plan";
+    public const string AuditQuestionCreate = "Audit Question";
+    public const string AuditQuestionUpdate = "Audit Question";
+    public const string AuditQuestionDelete = "Audit Question";
+    public const string AuditFunctionalityCreate = "Audit Functionality";
+    public const string AuditFunctionalityUpdate = "Audit Functionality";
+    public const string AuditFunctionalityDelete = "Audit Functionality";
+
+}

@@ -1,0 +1,164 @@
+import React, { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { usePostData } from "../../hooks/dataApi";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import Input from "../../components/Input";
+import SaveButton from "../../components/button/SaveButton";
+import moment from "moment";
+import DatePicker from "../../components/DatePicker";
+import { DataListFromDb, SelectFromDb } from "../../components/SelectList";
+import InputFile from "../../components/InputFile";
+
+const schema = yup.object({
+  pinName: yup.string().required("Required").max(50),
+  branchId: yup.string().required("Required").max(50),
+  departmentId: yup.string().required("Required").max(50),
+  staffTypeId: yup.string().required("Required").max(50),
+  effectiveDate: yup.date().required("Required"),
+  particulars: yup.string().required("Required").max(4000),
+});
+
+function TransferForm({ path, returnPath, action }) {
+  const navigate = useNavigate();
+  const { mutateAsync } = usePostData();
+  const [submitting, setSubmitting] = useState(false);
+  const [file, setFile] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      pinName: "",
+      branchId: "",
+      departmentId: "",
+      staffTypeId: "10001",
+      effectiveDate: new Date(),
+      particulars: "",
+    },
+    resolver: yupResolver(schema),
+  });
+
+  const {
+    pinName,
+    branchId,
+    departmentId,
+    staffTypeId,
+    effectiveDate,
+    particulars,
+  } = errors;
+
+  const onSubmit = async (formData) => {
+    setSubmitting(true);
+
+    var data = new FormData();
+    data.append("pinName", formData.pinName);
+    data.append("branchId", formData.branchId);
+    data.append("departmentId", formData.departmentId);
+    data.append("staffTypeId", formData.staffTypeId);
+    data.append(
+      "effectiveDate",
+      moment.utc(formData.effectiveDate).local().format("YYYY-MM-DD")
+    );
+    data.append("particulars", formData.particulars);
+    data.append("file", file);
+
+    try {
+      const { status } = await mutateAsync({
+        path: path,
+        formData: data,
+      });
+      if (status === 201) {
+        toast.success("Saved successfully!");
+        reset();
+      }
+      if (status === 204) {
+        toast.success("Update successful!");
+        navigate(returnPath);
+      }
+    } catch (error) {
+      if (error.response) {
+        toast.error("Response : " + error.response.data);
+      } else if (error.request) {
+        toast.error("Request : " + error.message);
+      } else {
+        toast.error("Error :", error.message);
+      }
+    } finally {
+      action();
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="form-col">
+        <DataListFromDb
+          register={register}
+          label="Employee"
+          path="/employees/select"
+          name="pinName"
+          errorMessage={pinName?.message}
+        />
+        <SelectFromDb
+          control={control}
+          label="New Branch"
+          path="/branches/select"
+          name="branchId"
+          errorMessage={branchId?.message}
+        />
+        <SelectFromDb
+          control={control}
+          label="New Department"
+          path="/departments/select"
+          name="departmentId"
+          errorMessage={departmentId?.message}
+        />
+        <SelectFromDb
+          control={control}
+          label="New Staff Type"
+          path="/staffTypes/select"
+          name="staffTypeId"
+          errorMessage={staffTypeId?.message}
+        />
+        <Controller
+          control={control}
+          name="effectiveDate"
+          render={({ field }) => (
+            <DatePicker
+              label="Effective Date"
+              field={field}
+              errorMessage={effectiveDate?.message}
+              isRow={false}
+            />
+          )}
+        />
+        <Input
+          name="particulars"
+          label="Particulars"
+          type="text"
+          register={register}
+          errorMessage={particulars?.message}
+        />
+
+        <InputFile
+          name="file"
+          register={register}
+          action={setFile}
+          errorMessage={file?.message}
+        />
+      </div>
+      <div className="from-cols mt-4">
+        <SaveButton btnText="Save" disabled={submitting} />
+      </div>
+    </form>
+  );
+}
+
+export default TransferForm;
